@@ -10,7 +10,8 @@ import handleClick from "../events/handleClick";
 function RandomQuote() {
   const quote = useSelector((state) => state.data);
   const dispatch = useDispatch();
-  const twitterHref = `http://twitter.com/share?text="${quote.content}" - ${quote.author}&hashtags=quotes`;
+   const twitterHref = `https://twitter.com/intent/tweet?text=${quote.content}" - ${quote.author}&hashtags=quotes`
+  //const twitterHref = `http://twitter.com/share?text="${quote.content}" - ${quote.author}&hashtags=quotes`;
   const tumblrHref = `https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=${quote.author}&content=${quote.content}&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button`;
 
   useEffect(() => {
